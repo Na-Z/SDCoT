@@ -1,0 +1,8 @@
+tensorboard==1.14.0
+matplotlib
+opencv-python
+plyfile
+trimesh==2.35.39
+mayavi
+sklearn
+easydict
