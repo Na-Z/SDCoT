@@ -57,7 +57,9 @@ def get_class2scans(data_path, split='train'):
     '''Generate a mapping dictionary whose key is the class name and the values are the corresponding scan names
        containing objects of this class
     '''
-    class2scans_file = os.path.join(data_path, 'index_data', '%s_class2scans.pkl' %split)
+    index_data_path = os.path.join(data_path, 'index_data')
+    class2scans_file = os.path.join(index_data_path, '%s_class2scans.pkl' %split)
+    if not os.path.exists(index_data_path): os.mkdir(index_data_path)
 
     if os.path.exists(class2scans_file):
         with open(class2scans_file, 'rb') as f:
